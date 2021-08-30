@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+        <h1>welcome to ALIM issue correction</h1>
+        
+        <p>Please select your problem:</p>
+        <input type="radio" id="p1" name="age1" value="p1">
+        <label for="p1">problem1</label><br>
+        <input type="radio" id="p2" name="age2" value="p2">
+        <label for="p2">problem2</label><br><br>
+
+        <p>Please select your problem:</p>
+        <input type="radio" id="p3" name="age3" value="p3">
+        <label for="p3">problem1</label><br>
+        <input type="radio" id="p4" name="age4" value="p4">
+        <label for="p3">problem2</label><br><br>
+        <button onclick="func1()">lets go</button>
+        <script type='text/javascript'>
+    
+        function func1(){
+
+            if(document.getElementById('p1').checked) {
+            document.write("<html><body><form  id=myform action='{% url 'upload' %}'>");
+            document.write("</form></body></html>");
+            document.forms["myform"].submit();
+            }
+        }
+        </script>
+
+    
+    
+</body>
+</html>
